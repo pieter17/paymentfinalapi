@@ -18,6 +18,7 @@ using final_project.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using Npgsql;
 
 namespace final_project
 {
@@ -33,9 +34,12 @@ namespace final_project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<ApiDbContext>(options =>
+            //     options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+            //         new MariaDbServerVersion(new Version(5, 5, 62))));
+            
             services.AddDbContext<ApiDbContext>(options =>
-                options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                    new MariaDbServerVersion(new Version(5, 5, 62))));
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
             services.AddControllers();

@@ -10,8 +10,6 @@ using final_project.Data;
 using final_project.Models;
 using final_project.Models.DTO.Requests;
 using final_project.Models.DTO.Responses;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

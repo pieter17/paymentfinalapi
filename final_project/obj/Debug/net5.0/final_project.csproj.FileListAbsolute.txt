@@ -56,3 +56,5 @@ C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Microsoft
 C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Npgsql.dll
+C:\code-playground\dotnet\final_project\final_project\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
