@@ -37,7 +37,7 @@ namespace final_project
             // services.AddDbContext<ApiDbContext>(options =>
             //     options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
             //         new MariaDbServerVersion(new Version(5, 5, 62))));
-            
+
             services.AddDbContext<ApiDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -158,6 +158,11 @@ namespace final_project
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseAuthorization();
 
